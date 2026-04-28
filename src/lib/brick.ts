@@ -27,7 +27,7 @@ export type BrickDynamicQrisData = {
 function getEnv(name: string): string {
   const value = process.env[name];
   if (!value) {
-    throw new Error(`Missing required env var: ${name}`);
+    throw new Error(`Server configuration error: missing ${name}`);
   }
   return value;
 }

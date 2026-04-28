@@ -71,7 +71,7 @@ export async function POST(request: Request) {
   } catch (error) {
     const message =
       error instanceof Error
-        ? error.message.replace(/Brick/gi, "provider")
+        ? error.message
         : "Failed to generate dynamic QRIS. Please try again.";
     return NextResponse.json({ error: message }, { status: 500 });
   }
